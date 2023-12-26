@@ -1,0 +1,21 @@
+.task-li{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    border: 2.5px solid var(--light-blue);
+    border-radius: 6px;
+
+    @media(min-width: 768px){
+        max-width: 1216px;
+    }
+}
+.task-checkbox{
+    width: 1.4rem;
+    height: 1.4rem;
+
+    border: 2.5px solid var(--light-blue);
+}
+.task-p{
+    font-weight: 300;
+}
