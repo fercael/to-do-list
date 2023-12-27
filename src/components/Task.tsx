@@ -1,4 +1,7 @@
 import { useState } from 'react'
+
+import { TrashSimple } from '@phosphor-icons/react'
+
 import styles from './Task.module.css'
 
 interface TaskProps {
@@ -30,6 +33,9 @@ function Task(props:TaskProps) {
             >
                 {props.content}
             </p>
+            <button className={styles['task-button']}>
+                <TrashSimple className={styles['task-trashsimple']} size={24} color='var(--red)'/>
+            </button>
         </li>
     )
 }

@@ -19,3 +19,16 @@
 .task-p{
     font-weight: 300;
 }
+.task-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background: none;
+   border: none;
+}
+.task-button:hover{
+    cursor: pointer; 
+}
+.task-trashsimple{
+
+}
