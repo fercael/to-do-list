@@ -1,11 +1,11 @@
 import { Header } from "./components/Header"
-import { Task } from "./components/Task"
+import { Tasklist } from "./components/Tasklist"
 
 function App() {
   return (
     <>
       <Header />
-      <Task id={1} status={true} content="Lavar roupa" />
+      <Tasklist />
     </>
   )
 }
