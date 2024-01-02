@@ -4,12 +4,17 @@ import { TrashSimple } from '@phosphor-icons/react'
 
 import styles from './Task.module.css'
 
+
+
+
 interface TaskProps {
-    id?: number,
-    content: string
+    id: number,
+    content: string,
+    deleteTask: () => void
 }
 
 function Task(props:TaskProps) {
+    const id = props.id;
     const [checkboxStatus, setCheckboxStatus] = useState(false)
 
     return(
@@ -33,7 +38,12 @@ function Task(props:TaskProps) {
             >
                 {props.content}
             </p>
-            <button className={styles['task-button']}>
+            <button 
+                className={styles['task-button']}
+                onClick={() => {
+                    props.deleteTask(id)
+                }}
+            >
                 <TrashSimple className={styles['task-trashsimple']} size={24} color='var(--red)'/>
             </button>
         </li>

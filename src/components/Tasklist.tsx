@@ -4,15 +4,23 @@ import { PlusCircle } from "@phosphor-icons/react"
 import styles from "./Tasklist.module.css"
 
 
+
 function Tasklist() {
     const [listOfTasks, setListOfTasks] = useState(Array<string>)
     const [newTask, setNewTask] = useState('')
+
+    function updateList(id: number) {
+        listOfTasks.splice(id, 1)
+        setListOfTasks([...listOfTasks])
+    }
+
+
     return(
         <section className={styles['tasklist-section']}>
             <ul className={styles['tasklist-ul']}>
                 {listOfTasks.map((content, index) => {
                     return(
-                        <Task id={index} content={content}/>
+                        <Task key={index} id={index} content={content} deleteTask={updateList}/>
                     )
                 })}
             </ul>
