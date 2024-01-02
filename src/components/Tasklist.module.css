@@ -1,0 +1,46 @@
+.tasklist-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0rem 1rem;
+}
+.tasklist-ul{
+    width: 100%;
+    max-width: 1216px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.tasklist-input{
+    width: 100%;
+    max-width: 608px;
+    border-radius: 4px;
+    padding: 1rem;
+
+    border: none;
+    background-color: var(--light-blue);
+    opacity: 40%;
+    outline-color: var(--light-blue);
+
+    font-size: 1rem;
+}
+.tasklist-input:focus{
+    background-color: transparent;
+    color: white;
+    opacity: 80%;
+}
+.tasklist-button{
+    background: none;
+    border: none;
+    color: var(--light-blue);
+}
+.tasklist-button:hover{
+    cursor: pointer;
+    opacity: 60%;
+    
+}
+.tasklist-icon{
+    width: 3rem;
+    height: 3rem;
+}
