@@ -17,6 +17,19 @@ function Tasklist() {
 
     return(
         <section className={styles['tasklist-section']}>
+            <div className={styles['tasklist-inputbar']}>
+                <input className={styles['tasklist-input']} type="text" name="list-input" id="list-input" value={newTask} onChange={e=>{
+                    setNewTask(e.target.value)
+                }}/>
+                <button
+                    className={styles['tasklist-button']}
+                    onClick={()=>{
+                    setListOfTasks([...listOfTasks, newTask])
+                    }}
+                >
+                    <PlusCircle className={styles['tasklist-icon']} />
+                </button>
+            </div>
             <ul className={styles['tasklist-ul']}>
                 {listOfTasks.map((content, index) => {
                     return(
@@ -24,17 +37,7 @@ function Tasklist() {
                     )
                 })}
             </ul>
-            <input className={styles['tasklist-input']} type="text" name="list-input" id="list-input" value={newTask} onChange={e=>{
-                setNewTask(e.target.value)
-            }}/>
-            <button
-                className={styles['tasklist-button']}
-                onClick={()=>{
-                   setListOfTasks([...listOfTasks, newTask])
-                }}
-            >
-                <PlusCircle className={styles['tasklist-icon']} />
-            </button>
+          
         </section>
     )
 }
